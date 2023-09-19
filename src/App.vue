@@ -26,6 +26,12 @@
       </div>
 
       <v-spacer></v-spacer>
+      <v-btn
+       text
+       @click="goToManage()"
+      >
+        หน้าจัดการข้อมูล
+      </v-btn>
 
       <v-btn
        text
@@ -50,9 +56,13 @@ export default {
     //
   }),
   methods : {
+    goToManage (){
+      this.$router.push({path:'/manageTable'}).catch(()=>{})
+    },
     goToLogin (){
       this.$router.push({path:'/login'})
     }
   }
+  
 }
 </script>
