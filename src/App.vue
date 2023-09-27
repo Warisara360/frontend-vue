@@ -28,6 +28,14 @@
       <v-spacer></v-spacer>
       <v-btn
        text
+       @click="goToConnect()"
+      >
+      Connect Backend
+      </v-btn>
+
+
+      <v-btn
+       text
        @click="goToManage()"
       >
         หน้าจัดการข้อมูล
@@ -61,6 +69,9 @@ export default {
     },
     goToLogin (){
       this.$router.push({path:'/login'})
+    },
+    goToConnect(){
+      this.$router.push({path:'/connect'}).catch(()=>{})
     }
   }
   
