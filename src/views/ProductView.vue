@@ -2,7 +2,7 @@
     <v-container>
       <v-row>
           <v-col cols= "12"> 
-            <Student/>
+            <Product/>
   
           </v-col>
       </v-row>
@@ -10,13 +10,13 @@
   </template>
   
   <script>
-  import Student from '../components/Product.vue';
+  import Product from '../components/Product.vue';
   
   export default {
       comments: {
-          Student: () => import('../components/Product.vue')
+        Product: () => import('../components/Product.vue')
       },
-      components: { Student }
+      components: { Product}
   }
   </script>
   
